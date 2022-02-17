@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "981933555605",
+    "project_id": "road-2-marathon-4e36a",
+    "storage_bucket": "road-2-marathon-4e36a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:981933555605:android:2e7f5db2d8c3cfec08809c",
+        "android_client_info": {
+          "package_name": "com.example.road_2_marathon"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "981933555605-69ssr8v9up34ptoqa52jv492rjh98taj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCvwxKPZOPJXAHx_y4Zowy9pTogQsSTtPI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "981933555605-69ssr8v9up34ptoqa52jv492rjh98taj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

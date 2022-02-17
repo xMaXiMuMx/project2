@@ -35,12 +35,9 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   form_field_validator: ^1.1.0
-  flutter_launcher_icons: ^0.9.2
-
-  flutter_icons:
-    android : true
-    ios : true
-    image_path : "assets/images/icon.png"
+  firebase_core: ^1.12.0
+  firebase_auth: ^3.3.7
+  fluttertoast: ^8.0.8
 
 dev_dependencies:
   flutter_test:
