@@ -19,7 +19,7 @@ class _IndexState extends State<Index> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.black,
-        title: Text("ยินดีต้อนรับ"),
+        title: Text("Welcome"),
       ),
       backgroundColor: Colors.yellowAccent[100],
       body: Padding(
@@ -100,7 +100,7 @@ class _IndexState extends State<Index> {
                   width: double.infinity,
                   child: ElevatedButton.icon(
                     icon: Icon(Icons.logout),
-                    label: Text("ออกจากระบบ", style: TextStyle(fontSize: 20)),
+                    label: Text("Sign out", style: TextStyle(fontSize: 20)),
                     onPressed: () {
                       auth.signOut().then((value) {
                         Navigator.pushReplacement(context,

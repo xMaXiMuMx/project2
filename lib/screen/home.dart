@@ -24,7 +24,7 @@ class HomeScreen extends StatelessWidget {
                 width: double.infinity,
                 child: ElevatedButton.icon(
                     icon: Icon(Icons.add),
-                    label: Text("Creat New Account",
+                    label: Text("Create New Account",
                         style: TextStyle(fontSize: 20)),
                     onPressed: () {
                       Navigator.pushReplacement(context,

@@ -37,7 +37,7 @@ class _LoginScreenState extends State<LoginScreen> {
             return Scaffold(
               appBar: AppBar(
                 backgroundColor: Colors.black,
-                title: Text("เข้าสู่ระบบ"),
+                title: Text("Login"),
               ),
               backgroundColor: Colors.cyan[50],
               body: Container(
@@ -79,8 +79,8 @@ class _LoginScreenState extends State<LoginScreen> {
                         SizedBox(
                           width: double.infinity,
                           child: ElevatedButton(
-                            child: Text("ลงชื่อเข้าใช้",
-                                style: TextStyle(fontSize: 20)),
+                            child:
+                                Text("Sing in", style: TextStyle(fontSize: 20)),
                             onPressed: () async {
                               if (formKey.currentState!.validate()) {
                                 formKey.currentState!.save();
