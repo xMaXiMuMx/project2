@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:fluttertoast/fluttertoast.dart';
+import 'package:road_2_marathon/screen/Training/T_one.dart';
+import 'package:road_2_marathon/screen/Training/T_two.dart';
 
 class Training extends StatefulWidget {
   const Training({Key? key}) : super(key: key);
@@ -9,12 +10,6 @@ class Training extends StatefulWidget {
 }
 
 class _TrainingState extends State<Training> {
-  @override
-  void initState() {
-    Fluttertoast.showToast(msg: "Love", gravity: ToastGravity.BOTTOM);
-    super.initState();
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,28 +26,34 @@ class _TrainingState extends State<Training> {
           )),
           child: Column(
             children: <Widget>[
-              Container(
+              InkWell(
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => T_one()));
+                },
                 child: Container(
-                  padding:
-                      EdgeInsets.symmetric(horizontal: 16.0, vertical: 24.0),
-                  height: MediaQuery.of(context).size.height * 0.6,
-                  child: Card(
-                    color: Colors.grey[350],
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12.0),
-                    ),
-                    elevation: 8,
-                    child: Container(
-                      margin: const EdgeInsets.all(10.0),
-                      padding: const EdgeInsets.all(5.0),
-                      child: Center(
-                        child: ListTile(
-                          title: Text("วิธีการซ้อมวิ่ง",
-                              style: TextStyle(fontSize: 20)),
-                          subtitle: Image.asset(
-                            "assets/images/table.jpg", // fit: BoxFit.contain,
-                            width: 500,
-                            height: 400,
+                  child: Container(
+                    padding:
+                        EdgeInsets.symmetric(horizontal: 16.0, vertical: 24.0),
+                    height: MediaQuery.of(context).size.height * 0.6,
+                    child: Card(
+                      color: Colors.grey[350],
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(12.0),
+                      ),
+                      elevation: 8,
+                      child: Container(
+                        margin: const EdgeInsets.all(10.0),
+                        padding: const EdgeInsets.all(5.0),
+                        child: Center(
+                          child: ListTile(
+                            title: Text("ลักษณะท่าทางการวิ่ง",
+                                style: TextStyle(fontSize: 20)),
+                            subtitle: Image.asset(
+                              "assets/images/run.jpg", // fit: BoxFit.contain,
+                              width: 500,
+                              height: 400,
+                            ),
                           ),
                         ),
                       ),
@@ -60,57 +61,34 @@ class _TrainingState extends State<Training> {
                   ),
                 ),
               ),
-              Container(
+              InkWell(
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => T_two()));
+                },
                 child: Container(
-                  padding:
-                      EdgeInsets.symmetric(horizontal: 16.0, vertical: 24.0),
-                  height: MediaQuery.of(context).size.height * 0.6,
-                  child: Card(
-                    color: Colors.tealAccent[100],
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12.0),
-                    ),
-                    elevation: 8,
-                    child: Container(
-                      margin: const EdgeInsets.all(10.0),
-                      padding: const EdgeInsets.all(5.0),
-                      child: Center(
-                        child: ListTile(
-                          title: Text("วิธีการออกกำลังกาย",
-                              style: TextStyle(fontSize: 20)),
-                          subtitle: Image.asset(
-                            "assets/images/workout.jpg", // fit: BoxFit.contain,
-                            width: 500,
-                            height: 400,
-                          ),
-                        ),
+                  child: Container(
+                    padding:
+                        EdgeInsets.symmetric(horizontal: 16.0, vertical: 24.0),
+                    height: MediaQuery.of(context).size.height * 0.6,
+                    child: Card(
+                      color: Colors.tealAccent[100],
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(12.0),
                       ),
-                    ),
-                  ),
-                ),
-              ),
-              Container(
-                child: Container(
-                  padding:
-                      EdgeInsets.symmetric(horizontal: 16.0, vertical: 24.0),
-                  height: MediaQuery.of(context).size.height * 0.6,
-                  child: Card(
-                    color: Colors.cyan[100],
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12.0),
-                    ),
-                    elevation: 8,
-                    child: Container(
-                      margin: const EdgeInsets.all(10.0),
-                      padding: const EdgeInsets.all(5.0),
-                      child: Center(
-                        child: ListTile(
-                          title: Text("อาหารที่ควรรับประธาน",
-                              style: TextStyle(fontSize: 20)),
-                          subtitle: Image.asset(
-                            "assets/images/eat.jpg", // fit: BoxFit.contain,
-                            width: 500,
-                            height: 400,
+                      elevation: 8,
+                      child: Container(
+                        margin: const EdgeInsets.all(10.0),
+                        padding: const EdgeInsets.all(5.0),
+                        child: Center(
+                          child: ListTile(
+                            title: Text("4 วิธีง่ายๆ เตรียมก่อนออกกำลังกาย",
+                                style: TextStyle(fontSize: 20)),
+                            subtitle: Image.asset(
+                              "assets/images/workout.jpg", // fit: BoxFit.contain,
+                              width: 500,
+                              height: 400,
+                            ),
                           ),
                         ),
                       ),

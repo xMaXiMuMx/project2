@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:road_2_marathon/screen/Treat/H_one.dart';
+import 'package:road_2_marathon/screen/Treat/H_two.dart';
 
 class Treat extends StatefulWidget {
   const Treat({Key? key}) : super(key: key);
@@ -11,7 +13,6 @@ class _TreatState extends State<Treat> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      //backgroundColor: Colors.limeAccent,
       appBar: AppBar(
         backgroundColor: Colors.black,
         title: Text("Treat Mode"),
@@ -25,36 +26,34 @@ class _TreatState extends State<Treat> {
           )),
           child: Column(
             children: <Widget>[
-              Container(
+              InkWell(
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => H_one()));
+                },
                 child: Container(
-                  padding:
-                      EdgeInsets.symmetric(horizontal: 16.0, vertical: 24.0),
-                  height: MediaQuery.of(context).size.height * 0.6,
-                  child: Card(
-                    color: Colors.grey[350], // สี
-                    shadowColor: Colors.black.withAlpha(100), // สีของเงา
-                    elevation: 5.0, // การยกของเงา
-                    margin: EdgeInsets.all(8.0), // การเยื้องขอบ
-                    shape: BeveledRectangleBorder(
-                      // รูปแบบ
-                      borderRadius: BorderRadius.circular(20),
-                      side: BorderSide(
-                        width: 2,
-                        color: Colors.grey,
-                        style: BorderStyle.solid,
+                  child: Container(
+                    padding:
+                        EdgeInsets.symmetric(horizontal: 16.0, vertical: 24.0),
+                    height: MediaQuery.of(context).size.height * 0.6,
+                    child: Card(
+                      color: Colors.green[200], // สี
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(12.0),
                       ),
-                    ),
-                    child: Container(
-                      margin: const EdgeInsets.all(10.0),
-                      padding: const EdgeInsets.all(5.0),
-                      child: Center(
-                        child: ListTile(
-                          title: Text("การวิ่งที่ถูกวิธี",
-                              style: TextStyle(fontSize: 20)),
-                          subtitle: Image.asset(
-                            "assets/images/run.jpg", // fit: BoxFit.contain,
-                            // width: 500,
-                            // height: 400,
+                      elevation: 8.0, // การยกของเงา
+                      child: Container(
+                        margin: const EdgeInsets.all(10.0),
+                        padding: const EdgeInsets.all(5.0),
+                        child: Center(
+                          child: ListTile(
+                            title: Text("วิธีฟื้นฟูร่างกายเมื่อวิ่งระยะทางไกล",
+                                style: TextStyle(fontSize: 20)),
+                            subtitle: Image.asset(
+                              "assets/images/recovery.jpg", // fit: BoxFit.contain,
+                              width: 500,
+                              height: 400,
+                            ),
                           ),
                         ),
                       ),
@@ -62,73 +61,34 @@ class _TreatState extends State<Treat> {
                   ),
                 ),
               ),
-              Container(
+              InkWell(
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => H_two()));
+                },
                 child: Container(
-                  padding:
-                      EdgeInsets.symmetric(horizontal: 16.0, vertical: 24.0),
-                  height: MediaQuery.of(context).size.height * 0.45,
-                  child: Card(
-                    color: Colors.orangeAccent[100], // สี
-                    shadowColor: Colors.black.withAlpha(100), // สีของเงา
-                    elevation: 5.0, // การยกของเงา
-                    margin: EdgeInsets.all(8.0), // การเยื้องขอบ
-                    shape: BeveledRectangleBorder(
-                      // รูปแบบ
-                      borderRadius: BorderRadius.circular(20),
-                      side: BorderSide(
-                        width: 2,
-                        color: Colors.orangeAccent,
-                        style: BorderStyle.solid,
+                  child: Container(
+                    padding:
+                        EdgeInsets.symmetric(horizontal: 16.0, vertical: 24.0),
+                    height: MediaQuery.of(context).size.height * 0.4,
+                    child: Card(
+                      color: Colors.red[300], // สี
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(12.0),
                       ),
-                    ),
-                    child: Container(
-                      margin: const EdgeInsets.all(10.0),
-                      padding: const EdgeInsets.all(5.0),
-                      child: Center(
-                        child: ListTile(
-                          title: Text("การหลีกเลี่ยงอาการบาดเจ็บ",
-                              style: TextStyle(fontSize: 20)),
-                          subtitle: Image.asset(
-                            "assets/images/safe.jpg", // fit: BoxFit.contain,
-                            // width: 500,
-                            // height: 400,
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-              Container(
-                child: Container(
-                  padding:
-                      EdgeInsets.symmetric(horizontal: 16.0, vertical: 24.0),
-                  height: MediaQuery.of(context).size.height * 0.4,
-                  child: Card(
-                    color: Colors.limeAccent[100], // สี
-                    shadowColor: Colors.black.withAlpha(100), // สีของเงา
-                    elevation: 5.0, // การยกของเงา
-                    margin: EdgeInsets.all(8.0), // การเยื้องขอบ
-                    shape: BeveledRectangleBorder(
-                      // รูปแบบ
-                      borderRadius: BorderRadius.circular(20),
-                      side: BorderSide(
-                        width: 2,
-                        color: Colors.limeAccent,
-                        style: BorderStyle.solid,
-                      ),
-                    ),
-                    child: Container(
-                      margin: const EdgeInsets.all(10.0),
-                      padding: const EdgeInsets.all(5.0),
-                      child: Center(
-                        child: ListTile(
-                          title:
-                              Text("อะโวคาโด้", style: TextStyle(fontSize: 20)),
-                          subtitle: Image.asset(
-                            "assets/images/fruit.jpg", // fit: BoxFit.contain,
-                            // width: 500,
-                            // height: 400,
+                      elevation: 8,
+                      child: Container(
+                        margin: const EdgeInsets.all(10.0),
+                        padding: const EdgeInsets.all(5.0),
+                        child: Center(
+                          child: ListTile(
+                            title: Text("ผลจากการวิ่งหนักเกินไป",
+                                style: TextStyle(fontSize: 20)),
+                            subtitle: Image.asset(
+                              "assets/images/hurt.jpg", // fit: BoxFit.contain,
+                              width: 500,
+                              height: 400,
+                            ),
                           ),
                         ),
                       ),

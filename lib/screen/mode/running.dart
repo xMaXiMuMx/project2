@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:road_2_marathon/screen/Running/R_one.dart';
+import 'package:road_2_marathon/screen/Running/R_three.dart';
+import 'package:road_2_marathon/screen/Running/R_two.dart';
 
 class Running extends StatefulWidget {
   const Running({Key? key}) : super(key: key);
@@ -25,70 +28,90 @@ class _RunningState extends State<Running> {
           )),
           child: Column(
             children: <Widget>[
-              Container(
+              InkWell(
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => R_one()));
+                },
                 child: Container(
-                  padding:
-                      EdgeInsets.symmetric(horizontal: 16.0, vertical: 24.0),
-                  height: MediaQuery.of(context).size.height * 0.3,
-                  child: Card(
-                    color: Colors.brown[100],
-                    shape: CircleBorder(),
-                    elevation: 8,
-                    child: Container(
-                      child: ListTile(
-                        title: Text("มือใหม่", style: TextStyle(fontSize: 20)),
-                        subtitle: Image.asset(
-                          "assets/images/newbie.png",
-                          // fit: BoxFit.contain,
-                          // width: 300,
-                          // height: 300,
+                  child: Container(
+                    padding:
+                        EdgeInsets.symmetric(horizontal: 16.0, vertical: 24.0),
+                    height: MediaQuery.of(context).size.height * 0.3,
+                    child: Card(
+                      color: Colors.brown[100],
+                      shape: CircleBorder(),
+                      elevation: 8,
+                      child: Container(
+                        child: ListTile(
+                          title:
+                              Text("มือใหม่", style: TextStyle(fontSize: 20)),
+                          subtitle: Image.asset(
+                            "assets/images/newbie.png",
+                            // fit: BoxFit.contain,
+                            // width: 300,
+                            // height: 300,
+                          ),
                         ),
                       ),
                     ),
                   ),
                 ),
               ),
-              Container(
+              InkWell(
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => R_two()));
+                },
                 child: Container(
-                  padding:
-                      EdgeInsets.symmetric(horizontal: 16.0, vertical: 24.0),
-                  height: MediaQuery.of(context).size.height * 0.3,
-                  child: Card(
-                    color: Colors.deepOrange[200],
-                    shape: CircleBorder(),
-                    elevation: 8,
-                    child: Container(
-                      child: ListTile(
-                        title:
-                            Text("บุคคลทั่วไป", style: TextStyle(fontSize: 20)),
-                        subtitle: Image.asset(
-                          "assets/images/normal.png",
-                          // fit: BoxFit.contain,
-                          // width: 300,
-                          // height: 300,
+                  child: Container(
+                    padding:
+                        EdgeInsets.symmetric(horizontal: 16.0, vertical: 24.0),
+                    height: MediaQuery.of(context).size.height * 0.3,
+                    child: Card(
+                      color: Colors.deepOrange[200],
+                      shape: CircleBorder(),
+                      elevation: 8,
+                      child: Container(
+                        child: ListTile(
+                          title: Text("บุคคลทั่วไป",
+                              style: TextStyle(fontSize: 20)),
+                          subtitle: Image.asset(
+                            "assets/images/normal.png",
+                            // fit: BoxFit.contain,
+                            // width: 300,
+                            // height: 300,
+                          ),
                         ),
                       ),
                     ),
                   ),
                 ),
               ),
-              Container(
+              InkWell(
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => R_three()));
+                },
                 child: Container(
-                  padding:
-                      EdgeInsets.symmetric(horizontal: 16.0, vertical: 24.0),
-                  height: MediaQuery.of(context).size.height * 0.3,
-                  child: Card(
-                    color: Colors.red[400],
-                    shape: CircleBorder(),
-                    elevation: 8,
-                    child: Container(
-                      child: ListTile(
-                        title: Text("มืออาชีพ", style: TextStyle(fontSize: 20)),
-                        subtitle: Image.asset(
-                          "assets/images/pro.png",
-                          // fit: BoxFit.contain,
-                          // width: 300,
-                          // height: 300,
+                  child: Container(
+                    padding:
+                        EdgeInsets.symmetric(horizontal: 16.0, vertical: 24.0),
+                    height: MediaQuery.of(context).size.height * 0.3,
+                    child: Card(
+                      color: Colors.red[400],
+                      shape: CircleBorder(),
+                      elevation: 8,
+                      child: Container(
+                        child: ListTile(
+                          title:
+                              Text("มืออาชีพ", style: TextStyle(fontSize: 20)),
+                          subtitle: Image.asset(
+                            "assets/images/pro.png",
+                            // fit: BoxFit.contain,
+                            // width: 300,
+                            // height: 300,
+                          ),
                         ),
                       ),
                     ),

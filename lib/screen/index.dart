@@ -5,6 +5,7 @@ import 'package:road_2_marathon/screen/home.dart';
 import 'package:road_2_marathon/screen/mode/running.dart';
 import 'package:road_2_marathon/screen/mode/training.dart';
 import 'package:road_2_marathon/screen/mode/treat.dart';
+import 'package:road_2_marathon/screen/record.dart';
 
 class Index extends StatefulWidget {
   @override
@@ -85,6 +86,26 @@ class _IndexState extends State<Index> {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) {
                       return Treat();
+                    }));
+                  },
+                  style: ElevatedButton.styleFrom(
+                    primary: Colors.black,
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              SizedBox(
+                width: double.infinity,
+                height: 50.0,
+                child: ElevatedButton.icon(
+                  icon: Icon(Icons.book),
+                  label: Text("Record", style: TextStyle(fontSize: 20)),
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) {
+                      return Record();
                     }));
                   },
                   style: ElevatedButton.styleFrom(
