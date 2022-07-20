@@ -101,7 +101,8 @@ class _IndexState extends State<Index> {
                 height: 50.0,
                 child: ElevatedButton.icon(
                   icon: Icon(Icons.book),
-                  label: Text("Record", style: TextStyle(fontSize: 20)),
+                  label:
+                      Text("Simulate Program", style: TextStyle(fontSize: 20)),
                   onPressed: () {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) {
